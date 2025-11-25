@@ -1,0 +1,11 @@
+<<<<<<< def format_rupiah(value: float) -> str:
+    """Format number to Rupiah currency string with dots as thousand separator and no decimals.""" 
+    if value is None:
+        return ""
+    return "Rp " + "{:,.0f}".format(value).replace(",", ".")
+=======
+def format_rupiah(value: float) -> str:
+    """Format number to Rupiah currency string with dots as thousand separator and 2 decimals.""" 
+    if value is None:
+        return ""
+    return "Rp {:,.2f}".format(value).replace(",", ".")

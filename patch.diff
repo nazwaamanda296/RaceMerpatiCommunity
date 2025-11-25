@@ -1,0 +1,47 @@
+btn_css = """
+    <style>
+    div.stButton > button {
+        width: 120px;
+        height: 40px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #9f86c0 0%, #d8bfd8 100%);
+        color: white;
+        font-weight: 600;
+        box-shadow: 2px 2px 8px rgba(111, 85, 160, 0.25);
+        transition: background 0.3s ease;
+        border: none;
+    }
+    div.stButton > button:hover {
+        background: linear-gradient(135deg, #d8bfd8 0%, #9f86c0 100%);
+        cursor: pointer;
+    }
+    </style>
+    """
+=======
+    # Button style CSS injected - updated for better text fit
+    btn_css = """
+    <style>
+    div.stButton > button {
+        min-width: 140px;  /* increased min width */
+        max-width: 160px;  /* set max width */
+        height: 40px;
+        padding: 0 12px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #9f86c0 0%, #d8bfd8 100%);
+        color: white;
+        font-weight: 600;
+        box-shadow: 2px 2px 8px rgba(111, 85, 160, 0.25);
+        transition: background 0.3s ease;
+        border: none;
+        white-space: nowrap; /* prevent wrapping */
+        overflow: hidden; /* hide overflow */
+        text-overflow: ellipsis; /* show ellipsis */
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+    div.stButton > button:hover {
+        background: linear-gradient(135deg, #d8bfd8 0%, #9f86c0 100%);
+        cursor: pointer;
+    }
+    </style>
+    """

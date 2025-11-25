@@ -1,0 +1,27 @@
+<<<<<<<         with col1:
+            debit_label = st.selectbox(
+                "Akun Debit",
+                list(akun_map.keys()),
+                key="debit_input_transaksi"
+            )
+        with col2:
+            kredit_label = st.selectbox(
+                "Akun Kredit",
+                list(akun_map.keys()),
+                key="kredit_input_transaksi"
+            )
+=======
+        with col1:
+            debit_label = st.selectbox(
+                "Akun Debit",
+                list(akun_map.keys()),
+                key="debit_input_transaksi",
+                help="Pilih akun debit sesuai transaksi"
+            )
+        with col2:
+            kredit_label = st.selectbox(
+                "Akun Kredit",
+                list(akun_map.keys()),
+                key="kredit_input_transaksi",
+                help="Pilih akun kredit sesuai transaksi"
+            )

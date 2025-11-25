@@ -1,0 +1,45 @@
+<<<<<<<             with c1:
+                if st.button("Simpan Perubahan", key=f"simpan_edit_{pilih_id}"):
+                    if nominal_e <= 0:
+                        st.warning("Nominal harus lebih dari 0 dan dalam format Rupiah yang benar, misal: Rp 1.000.000")
+                    elif debit_e == kredit_e:
+                        st.warning("Akun debit dan kredit tidak boleh sama.")
+                    else:
+                        update_transaction(
+                            pilih_id,
+                            str(tgl_e),
+                            desk_e,
+                            akun_map[debit_e],
+                            akun_map[kredit_e],
+                            nominal_e,
+                        )
+                        st.success("Transaksi diubah.")
+                        rerun()
+            with c2:
+                if st.button("Hapus Transaksi", key=f"hapus_{pilih_id}"):
+                    delete_transaction(pilih_id)
+                    st.success("Transaksi dihapus.")
+                    rerun()
+=======
+            with c1:
+                if st.button("Edit Transaksi", key=f"simpan_edit_{pilih_id}"):
+                    if nominal_e <= 0:
+                        st.warning("Nominal harus lebih dari 0 dan dalam format Rupiah yang benar, misal: Rp 1.000.000,00")
+                    elif debit_e == kredit_e:
+                        st.warning("Akun debit dan kredit tidak boleh sama.")
+                    else:
+                        update_transaction(
+                            pilih_id,
+                            str(tgl_e),
+                            desk_e,
+                            akun_map[debit_e],
+                            akun_map[kredit_e],
+                            nominal_e,
+                        )
+                        st.success("Transaksi berhasil diubah!")
+                        rerun()
+            with c2:
+                if st.button("Hapus Transaksi", key=f"hapus_{pilih_id}"):
+                    delete_transaction(pilih_id)
+                    st.success("Transaksi berhasil dihapus!")
+                    rerun()

@@ -1,0 +1,48 @@
+<<<<<<<         if rows:
+            df = transactions_to_df(rows)
+            styled_df = df.style.set_properties(**{
+                'border': '1px solid #ddd',
+                'padding': '10px',
+                'font-family': "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+                'font-size': '0.9rem',
+                'color': '#333'
+            }).set_table_styles([{
+                'selector': 'th',
+                'props': [
+                    ('background', 'linear-gradient(135deg, #A3C8FF, #D7F3E3)'),
+                    ('color', '#1A3A66'),
+                    ('font-weight', '700'),
+                    ('padding', '10px 12px'),
+                    ('border-bottom', '2px solid #777'),
+                    ('text-align', 'left')
+                ]
+            }]).highlight_null(color='#f7f9fc')
+            st.dataframe(styled_df)
+        else:
+            st.info("Belum ada transaksi.")
+=======         if rows:
+            df = transactions_to_df(rows)
+            # Rename columns for clarity
+            df.columns = ["ID", "Tanggal", "Keterangan", "Kode Debit", "Nama Debit", "Kode Kredit", "Nama Kredit", "Jumlah"]
+            # Format 'Jumlah' column with Rupiah 2 decimals
+            df['Jumlah'] = df['Jumlah'].apply(lambda x: format_rupiah(x))
+            styled_df = df.style.set_properties(**{
+                'border': '1px solid #ddd',
+                'padding': '10px',
+                'font-family': "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+                'font-size': '0.9rem',
+                'color': '#333'
+            }).set_table_styles([{
+                'selector': 'th',
+                'props': [
+                    ('background', 'linear-gradient(135deg, #A3C8FF, #D7F3E3)'),
+                    ('color', '#1A3A66'),
+                    ('font-weight', '700'),
+                    ('padding', '10px 12px'),
+                    ('border-bottom', '2px solid #777'),
+                    ('text-align', 'left')
+                ]
+            }]).highlight_null(color='#f7f9fc')
+            st.dataframe(styled_df)
+        else:
+            st.info("Belum ada transaksi.")

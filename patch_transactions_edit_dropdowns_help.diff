@@ -1,0 +1,29 @@
+<<<<<<<             with col2:
+                debit_e = st.selectbox(
+                    "Akun Debit",
+                    list(akun_map.keys()),
+                    index=list(akun_map.values()).index(tx["debit_account_id"]),
+                    key=f"debit_edit_{pilih_id}"
+                )
+                kredit_e = st.selectbox(
+                    "Akun Kredit",
+                    list(akun_map.keys()),
+                    index=list(akun_map.values()).index(tx["credit_account_id"]),
+                    key=f"kredit_edit_{pilih_id}"
+                )
+=======
+            with col2:
+                debit_e = st.selectbox(
+                    "Akun Debit",
+                    list(akun_map.keys()),
+                    index=list(akun_map.values()).index(tx["debit_account_id"]),
+                    key=f"debit_edit_{pilih_id}",
+                    help="Pilih akun debit sesuai transaksi"
+                )
+                kredit_e = st.selectbox(
+                    "Akun Kredit",
+                    list(akun_map.keys()),
+                    index=list(akun_map.values()).index(tx["credit_account_id"]),
+                    key=f"kredit_edit_{pilih_id}",
+                    help="Pilih akun kredit sesuai transaksi"
+                )
